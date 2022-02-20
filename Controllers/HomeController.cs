@@ -74,7 +74,14 @@ namespace PasswordGenerator.Controllers
 
             newPassword = newPassword + specialWord;
 
-            ViewBag.NewPassword = newPassword;
+            if(newPassword == "")
+            {
+                ViewBag.NewPassword = "No Password";
+            }
+            else
+            {
+                ViewBag.NewPassword = newPassword;
+            }
             return View();
         }
 

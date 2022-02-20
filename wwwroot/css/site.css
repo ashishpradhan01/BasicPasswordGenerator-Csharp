@@ -111,3 +111,12 @@ select {
     min-width: 15ch;
     max-width: 30ch;
 }
+
+.github {
+    color: var(--main-color);
+    
+}
+.github:hover {
+    text-decoration: none;
+}    
+    
