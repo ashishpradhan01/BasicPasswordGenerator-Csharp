@@ -1,0 +1,88 @@
+﻿@model PasswordGenerator.Models.PasswordModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<form method="post" action="/Home/NewPassword">
+
+    <div class="row py-5">
+        <div class="col-6">
+            <div class="mb-3">
+                <label for="lengthSelect" class="form-label"><h5>Password Length:</h5></label>
+                <select id="lengthSelect" class="form-select" name="passwordLength">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <h5>Include Symbols:</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="flexCheckDefault1" name="includeSymbols">
+                    <label class="form-check-label" for="flexCheckDefault1">
+                        ( e.g. @@#$% )
+                    </label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <h5>Include Numbers:</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="flexCheckDefault2" name="includeNumbers">
+                    <label class="form-check-label" for="flexCheckDefault2">
+                        ( e.g. 123456 )
+                    </label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <h5>Include Lowercase Characters:</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="flexCheckDefault3" name="includeLowercase">
+                    <label class="form-check-label" for="flexCheckDefault3">
+                        ( e.g. abcdefgh )
+                    </label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <h5>Include Uppercase Characters:</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="flexCheckDefault4" name="includeUppercase">
+                    <label class="form-check-label" for="flexCheckDefault4">
+                        ( e.g. ABCDEFGH )
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="mb-3">
+                <label for="specialword" class="form-label"><h5>Special Word:</h5></label>
+                <input type="text" class="form-control" id="specialword" aria-describedby="emailHelp" name="specialWord">
+                <div id="emailHelp" class="form-text">Any word that you want to be included in your password.</div>
+            </div>
+
+            <button type="submit" class="btn btnpurple text-white">Generate</button>
+        </div>
+
+    </div>
+
+
+</form>
+
